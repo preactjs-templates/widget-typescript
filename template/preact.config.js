@@ -16,8 +16,24 @@ export default {
       config.output.filename = "[name].js";
 
       config.plugins = config.plugins.filter(plugin => !(plugin instanceof MiniCssExtractPlugin));
-
       config.module.rules = config.module.rules.map(rule => {
+        if (rule.loader === 'babel-loader') {
+          const use = [
+            {
+              loader: 'babel-loader',
+              options: rule.options
+            },
+            {
+              loader: 'ts-loader'
+            }
+          ];
+          return {
+            ...rule,
+            loader: undefined,
+            options: undefined,
+            use
+          };
+        }
         if (rule.use) {
           return {
             ...rule,
