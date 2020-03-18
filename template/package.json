@@ -10,7 +10,6 @@
     "test": "NODE_ENV=test jest",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build --no-prerender --clean --template src/index.ejs --sw false",
-    "serve": "npm run build && preact serve",
     "dev": "preact watch --template src/index.ejs --sw false",
     "lint": "eslint src/**/*.{ts,tsx}"
   },
