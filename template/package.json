@@ -8,7 +8,6 @@
   "source": "components/hello-world/index.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build --no-prerender --clean --template src/index.ejs --sw false",
     "dev": "preact watch --template src/index.ejs --sw false",
     "lint": "eslint src/**/*.{ts,tsx}"
@@ -19,7 +18,6 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "identity-obj-proxy": "^3.0.0",
-    "if-env": "^1.0.0",
     "jest": "^25.1.0",
     "node-sass": "^4.13.1",
     "preact-cli": "^3.0.0-next.19",
