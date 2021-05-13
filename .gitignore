@@ -3,3 +3,4 @@ node_modules
 *.lock
 *.log
 template/package-lock.json
+template/size-plugin.json
