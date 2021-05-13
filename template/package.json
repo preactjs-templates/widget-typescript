@@ -10,7 +10,7 @@
     "dev": "preact watch --template src/template.html",
     "build:widget": "microbundle build",
     "build:lib": "microbundle build -i src/component.tsx",
-    "lint": "eslint '{src,test}/**/*.{ts,tsx}'",
+    "lint": "eslint '{src,tests}/**/*.{ts,tsx}'",
     "test": "jest"
   },
   "files": [

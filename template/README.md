@@ -10,7 +10,10 @@ npm install
 npm run dev
 
 # build npm ready bundles to be consumed by other Preact web apps
-npm run build
+npm run build:widget
+
+# build npm ready bundles to be used as a component library
+npm run build:lib
 
 # lint the project with eslint to find code style issues
 npm run lint
