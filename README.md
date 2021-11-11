@@ -1,48 +1,45 @@
-# Preact widget-typescript starter project
+# Preact Widget-Typescript Template
 
-## Documentation
+## Overview
 
--   This is a TypeScript version of the default template for
-    [preact-cli](https://github.com/developit/preact-cli).
--   [For Preact](https://preactjs.com/): General information about how to work
-    with Preact, not specific to this template
+- This is a TypeScript-based template for creating a Preact widget or a component library
+- [Preact-CLI](https://github.com/preactjs/preact-cli): Used for running a local development environment to use your widget in
+- [Microbundle](https://github.com/developit/microbundle): Used for bundling your widget/library for use in other Preact web apps
+- [Preact](https://preactjs.com/): General information about how to work with Preact, not specific to this template
 
 ## Usage
 
 ```bash
-$ npm install -g preact-cli
-$ preact create widget-typescript my-project
-$ cd my-project
+$ npx preact-cli create widget-typescript my-widget
+$ cd my-widget
 $ npm install
 $ npm run dev
 ```
 
 Development server runs on port `8080`. If the default port is already in use on
-your machine it will start the development server on a random port.
+your machine, it will start the development server on a random port.
 
 ## Commands
 -   `npm install`: Installs dependencies
 
--   `npm run start`: Runs `serve` or `dev`, depending on `NODE_ENV` value.
-    Defaults to `dev server`
+-   `npm run dev`: Run a development server with Preact-CLI to test your widget
 
--   `npm run dev`: Run a development, HMR server
+-   `npm run build:widget`: NPM-ready build with Microbundle, to distribute your widget to be consumed by other Preact web applications
 
--   `npm run build`: Production-ready build
+-   `npm run build:lib`: NPM-ready build with Microbundle, to distribute your component as a Preact component library
 
--   `npm run lint`: Pass TypeScript files using ESLint
+-   `npm run lint`: Lint files use ESLint 
 
--   `npm run test`: Run Jest and
-    [`preact-render-spy`](https://github.com/mzgoddard/preact-render-spy) for
+-   `npm run test`: Run Jest and Enzyme with
+    [`enzyme-adapter-preact-pure`](https://github.com/preactjs/enzyme-adapter-preact-pure) for
     your tests
 
 ### How to Test
 
-The `typescript` template provides a basic test setup with Jest and
-[`preact-render-spy`](https://github.com/mzgoddard/preact-render-spy). You are
-free to change preact-render-spy with any other assertion library. The advantage
-of it is that it supports a similar terminology and feature set as the Enzyme
-library for testing React applications.
+The `widget-typescript` template provides a basic test setup with Jest, Enzyme and
+[`enzyme-adapter-preact-pure`](https://github.com/preactjs/enzyme-adapter-preact-pure).
+You are free to change Enzyme with any other testing library
+(eg. [Preact Testing Library](https://testing-library.com/docs/preact-testing-library/intro)).
 
 You can run all additional Jest CLI commands with the `npm run test` command as
 described in the
